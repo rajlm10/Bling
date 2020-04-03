@@ -1,0 +1,55 @@
+{
+  "name": "bling",
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    }
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Raj",
+  "license": "MIT",
+  "scripts": {
+    "serve": "live-server public/",
+    "build": "webpack",
+    "dev-server": "webpack-dev-server",
+    "build-babel": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch",
+    "test": "jest --config=jest.config.json"
+  },
+  "dependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "1.5.2",
+    "babel-preset-react": "6.24.1",
+    "css-loader": "^0.28.11",
+    "enzyme": "^3.0.0",
+    "enzyme-adapter-react-16": "^1.0.0",
+    "enzyme-to-json": "^3.0.1",
+    "jest": "^20.0.4",
+    "live-server": "^1.2.1",
+    "moment": "^2.24.0",
+    "node-sass": "^4.13.1",
+    "normalize.css": "^7.0.0",
+    "raf": "^3.3.2",
+    "react": "^16.13.1",
+    "react-addons-shallow-compare": "^15.6.2",
+    "react-dates": "^21.8.0",
+    "react-dom": "^16.13.1",
+    "react-modal": "^2.2.2",
+    "react-redux": "^7.2.0",
+    "react-router-dom": "^5.1.2",
+    "react-test-renderer": "^16.0.0",
+    "redux": "^4.0.5",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "uuid": "^7.0.2",
+    "webpack": "^3.1.0",
+    "webpack-dev-server": "^2.11.5"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.11"
+  }
+}
