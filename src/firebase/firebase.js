@@ -1,5 +1,4 @@
 import * as firebase from 'firebase'
-import { connect } from 'react-redux'
 
 const firebaseConfig = {
     apiKey: "AIzaSyCboi1-iWEdkYrNDVtKUU6Gba8-fMhRn5o",
@@ -15,8 +14,9 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig)
 
 const database=firebase.database()
+const googleAuthProvider= new firebase.auth.GoogleAuthProvider()
 
-export {firebase,database as default}
+export {firebase,googleAuthProvider,database as default}
 
 // firebase.database().ref('expenses').push({
 //     description:'Sanaya',
