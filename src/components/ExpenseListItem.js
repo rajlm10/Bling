@@ -4,12 +4,13 @@ import moment from 'moment'
 
 const ExpenseListItem=(props)=>{
     return(
-        <div>
-            <h3><Link to={`/edit/${props.expense.id}`}>{props.expense.description}</Link></h3>
-            <p>{props.expense.amount} -  
-            {moment(props.expense.createdAt).format('MMMM Do,YYYY')}</p>
-
-        </div>
+        <Link to={`/edit/${props.expense.id}`} className="list-item">
+            <div>
+                <h3 className="list-item__title">{props.expense.description}</h3>
+                <span className="list-item__subtitle">{moment(props.expense.createdAt).format('MMMM Do,YYYY')}</span>
+            </div>
+            <h3 className="list-item__data">{props.expense.amount}</h3>
+        </Link>
     )
 }
 

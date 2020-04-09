@@ -7,14 +7,24 @@ const AddExpensePage=(props)=>{
     
     return (
         <div>
-            <h1>Expense Form</h1>
-            <ExpenseForm 
-            onSubmit={(expense)=>{
-                props.dispatch(startAddExpense(expense))
-                props.history.push('/')
-                
-            }}
-            />
+            <div className="page-header">
+                <div className="content-container">
+                    <div className="page-header__title">
+                        <h1>What did you spend it on?</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div className="content-container">
+                <ExpenseForm 
+                onSubmit={(expense)=>{
+                    props.dispatch(startAddExpense(expense))
+                    props.history.push('/')
+                    
+                }}
+                />
+            </div>
+
         </div>
     )
 }

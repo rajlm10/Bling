@@ -5,12 +5,13 @@ import {startLogout} from '../actions/auth'
 
 const Header=(props)=>{
     return(
-        <header>
-            <h1>Bling</h1>
-            <NavLink to="/dashboard" activeClassName="is-active" >Dashboard</NavLink>
-            <NavLink to="/create" activeClassName="is-active">Add Expense</NavLink>
-            
-            <button onClick={props.startLogout}>Logout</button>
+        <header className="header">
+            <div className="content-container">
+                <div className="header__content">
+                    <Link to="/dashboard" className="header__title"><h1>Bling</h1></Link>
+                    <button onClick={props.startLogout} className="button button--link">Logout</button>
+                </div>
+            </div>
         </header>
     )
 }
